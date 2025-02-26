@@ -9,6 +9,8 @@ const db = new Surreal();
 
 await db.connect("ws://localhost:8000");
 
+console.log("Connected");
+
 await db.use({
     namespace: "grooveguessr",
     database: "development",
@@ -19,7 +21,10 @@ await db.signin({
     password: "ajhv2EeKQLgWU8dyA9tsR4",
 });
 
+console.log("Logged in");
+
 for (const movie of movies) {
+    console.log(`Inserting movie ${ movie.title }`);
     await db.query(
         "CREATE movie SET id=$id, title=$title, budget=$budget, overview=$overview, poster=$poster, release_date=<datetime>$release_date, revenue=$revenue, runtime=$runtime, tagline=$tagline, vote_average=$vote_average, genre=$genre, language=$language, collection=$collection ;",
         {
@@ -43,3 +48,9 @@ for (const movie of movies) {
 }
 
 console.log("Done");
+
+await db.close();
+
+console.log("Closed");
+
+process.exit(0);
