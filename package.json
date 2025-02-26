@@ -1,0 +1,15 @@
+{
+  "name": "surreal-stuff",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "surrealdb": "^1.2.1"
+  }
+}
