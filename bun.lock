@@ -4,6 +4,7 @@
     "": {
       "name": "surreal-stuff",
       "dependencies": {
+        "@types/node": "^22.13.5",
         "surrealdb": "^1.2.1",
       },
       "devDependencies": {

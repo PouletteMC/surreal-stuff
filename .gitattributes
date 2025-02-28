@@ -1,1 +1,5 @@
 fixed.json filter=lfs diff=lfs merge=lfs -text
+fixed-movies.json filter=lfs diff=lfs merge=lfs -text
+fixed-shows.json filter=lfs diff=lfs merge=lfs -text
+collection_data.json filter=lfs diff=lfs merge=lfs -text
+collections.json filter=lfs diff=lfs merge=lfs -text
