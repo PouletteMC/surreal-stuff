@@ -3,10 +3,10 @@ import collections from "../collection_data.json" assert { type: "json" };
 import movies from "../fixed-movies.json" assert { type: "json" };
 import shows from "../fixed-shows.json" assert { type: "json" };
 
-// interface Genre {
-//     id: number;
-//     name: string;
-// }
+interface Genre {
+    id: number;
+    name: string;
+}
 const db = new Surreal();
 
 await db.connect("ws://localhost:8000");
